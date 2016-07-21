@@ -1,0 +1,65 @@
+<html>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" > 
+  <link rel="stylesheet" href="css/landing.css" > 
+
+<script  src="js/jquery-2.2.4.min.js"></script> 
+  <script src="js/bootstrap.min.js"> </script>
+</head>
+<body>
+  <!-- NAV --> 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/"> BlooDonR </a>
+          </div>
+
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+    			<li><a href="/index.html" > PreRegister   </a></li>
+          <li><a href="/apply.html" > Apply   </a></li>
+			 </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+
+	<div class="c cover row">
+    		<div class="jumbotron">
+    			<h1> Becoming a BlooDonR Hospital </h1>
+    			<p> A few lines of application. </p>
+    		</div>
+    		<form>
+                <h2> Apply </h2>
+               	<input type="text" placeholder="Hospital Name" id="name" />
+                  <span id='nameerror'> </span>
+                <br/> 
+
+               	<input type="text" placeholder="Email" id="email" />
+                  <span id='hopsitalemailerror'> </span>
+                <br/>
+
+               	<input type="text" placeholder="Phone" id="phone" />
+                  <span id='phoneerror'> </span>
+                <br/>
+
+                <textarea id="memo"> Specific Details..  </textarea>
+                <br/>
+    			<button>Apply</button>
+
+    		</form>
+    	</div>
+
+    <!-- Footer -->
+
+
+</body>
+</html>

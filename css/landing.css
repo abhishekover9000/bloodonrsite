@@ -1,0 +1,35 @@
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+.c{
+	text-align: center;
+}
+
+.whereitis{
+	margin-left:70vw;
+}
+
+.footer{
+	margin-top:5em;
+	color:white;
+	background-color: gray;
+
+}
+
+.footer	a{
+		color:white;
+	}
+
+.cover{
+	height:75vh;
+}
+
+.infopage{
+	height:50vh;
+}
+
+.thirdwell{
+	margin-top:10vh;
+}
