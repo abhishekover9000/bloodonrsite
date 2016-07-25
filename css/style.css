@@ -3083,6 +3083,15 @@ ul.social-share-sm.for-useful li a:after {
     font-size: 12px;
 }
 
+.apply-form-wrapper .form-group {
+    margin: 0 0 17px;
+}
+
+.apply-form-wrapper .help-block {
+    line-height: 1.2;
+    font-size: 12px;
+}
+
 .has-error .form-control {
     border-color: #a94442;
     -webkit-box-shadow: none;
