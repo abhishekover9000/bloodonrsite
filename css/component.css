@@ -3611,8 +3611,8 @@ body.introLoader_preventScroll {
 }
 
 .theme-dark.bubble.gifLoader .gifLoaderInner {
-    background-image: url(spinners/circle-bub_dark.gif);
-}
+    background-image: url(images/loader.gif);
+background-color: #F9F9F9;}
 
 .theme-ocean.bubble.gifLoader .gifLoaderInner {
     background-image: url(spinners/circle-bub_ocean.gif);
