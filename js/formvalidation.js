@@ -145,13 +145,13 @@ function checkReg(id, reg){
 	 		if (value.match(phonereg) != null) // check phone
 	 		{
 	 			flag= true;
-	 			displayMessage('phone', '', 'black')
+	 			displayMessage(id, '', 'black')
 
 	 		}
 	 		else{
 	 			flag = false;
 	 			console.log('no match phone');
-	 			displayMessage('phone', 'Must be Valid 10 Digit US Phone Number!', 'red')
+	 			displayMessage(id, 'Must be Valid 10 Digit US Phone Number!', 'red')
 	 		}
 	 		break;
 	 	default:

@@ -75,13 +75,17 @@
               <h4 class="text-center heading mt-10 mb-20">Pre Register</h4>
               
               <div class="form-group"> 
-                <input id="full_name" class="form-control" placeholder="Full Name" type="text" required> 
+                <input id="fullname1" class="form-control" placeholder="Full Name" type="text" required onKeyUp="validate('fullname1')"> 
+                <span id="fullname1error"> </span>
+
               </div>
               <div class="form-group"> 
-                <input id="email" class="form-control" placeholder="Email" type="email" required> 
+                <input id="email1" class="form-control" placeholder="Email" type="email" required onKeyUp="validate('email1')"> 
+                <span id="email1error"> </span>
               </div>
               <div class="form-group"> 
-                <input id="location" class="form-control" placeholder="Location" type="text" required> 
+                <input id="location1" class="form-control" placeholder="Location" type="text" required onKeyUp="validate('location1')"> 
+                <span id="location1error"> </span>            
               </div>
             
             </div>
@@ -90,7 +94,7 @@
             
               <div class="row gap-10">
                 <div class="col-xs-6 col-sm-6 mb-10">
-                  <button type="submit" class="btn btn-primary btn-block">Pre Register</button>
+                  <button type="submit" onClick="sendAjax(1)" class="btn btn-primary btn-block">Pre Register</button>
                 </div>
                 <div class="col-xs-6 col-sm-6 mb-10">
                   <button type="submit" class="btn btn-primary btn-block btn-inverse" data-dismiss="modal" aria-label="Close">Cancel</button>
@@ -244,10 +248,7 @@
                 
               </div>
             
-            </div>
-            
-            <form class="apply-form-wrapper" data-toggle="validator">
-            
+            </div>            
                 
                   <div class="row">
                   
@@ -255,26 +256,27 @@
                     
                       <div class="form-group">
                         <label for="hospitalName">Hospital Name <span class="font10 text-danger">(required)</span></label>
-                        <input id="hospitalName" type="text" class="form-control" data-error="Hospital name is required" required>
-                        <div class="help-block with-errors"></div>
+                        <input id="hospitalName" type="text" class="form-control" data-error="Hospital name is required" onKeyUp="validate('hospitalName')" required>
+                        <span id="hospitalNameerror"> </span>
                       </div>
                       
                       <div class="form-group">
                         <label for="hospitalEmail">Hospital Email <span class="font10 text-danger">(required)</span></label>
-                        <input id="hospitalEmail" type="email" class="form-control" data-error="Hospital email is required and must be a valid email address" required>
-                        <div class="help-block with-errors"></div>
+                        <input id="hospitalEmail" type="email" class="form-control" data-error="Hospital email is required and must be a valid email address" onKeyUp="validate('hospitalEmail')" required>
+                        <span id='hospitalEmailerror'> </span>
                       </div>
 
                        <div class="form-group">
                         <label for="hospitalNo">Hospital Phone Number <span class="font10 text-danger">(required)</span></label>
-                        <input id="hospitalNo" type="number" class="form-control" data-error="Hospital Phone Number is required and must be a valid US Phone Number" required>
-                        <div class="help-block with-errors"></div>
-                      </div>
+                        <input id="hospitalNo" type="number" class="form-control" data-error="Hospital Phone Number is required and must be a valid US Phone Number" onKeyUp="validate('hospitalNo')" required>
+                        <span id="hospitalNoerror"></span> 
+                        </div>
                       
                       <div class="form-group">
                         <label>Specific Details</label>
-                        <textarea id="inputMessage" class="form-control" rows="9" data-minlength="50" data-error="Your own message is required and must not less than 50 characters" required=""></textarea>                      </div>
-                      <button type="submit" class="btn btn-primary mt-5">Apply</button>
+                        <textarea id="inputMessage" class="form-control" rows="9" data-minlength="50" data-error="Your own message is required and must not less than 50 characters" required=""></textarea>
+                        <span id="inputMessageerror"></span>                      </div>
+                      <button type="submit" onClick="sendAjax(2)" class="btn btn-primary mt-5">Apply</button>
                     
                     </div>
                     
@@ -283,9 +285,7 @@
                 </div>
               
               </div>
-            
-            </form>
-            
+                        
           </div>
           
         </div>
@@ -412,7 +412,6 @@
         <div id="modal-login-form-wrapper">
           
           <!-- Begin # Login Form -->
-          <form id="login-form" data-toggle="validator">
           
             <div class="modal-body pb-5">
           
@@ -420,13 +419,16 @@
               <p>Feel free to register</p>
               
               <div class="form-group"> 
-                <input id="email" class="form-control" placeholder="Email" type="text" required> 
+                <input id="email" class="form-control" placeholder="Email" type="text" required onClick="validate('email')"> 
+                <span id="emailerror"> </span>
               </div>
               <div class="form-group"> 
-                <input id="fullname" class="form-control" placeholder="Full Name" type="text" required> 
+                <input id="fullname" class="form-control" placeholder="Full Name" type="text" required onClick="validate('fullname')"> 
+                <span id="fullnameerror"> </span>
               </div>
               <div class="form-group"> 
-                <input id="location" class="form-control" placeholder="Location" type="text" required>
+                <input id="location" class="form-control" placeholder="Location" type="text" required onClick="validate('location')">
+                <span id="locationerror"> </span>
               </div>
             
             </div>
@@ -435,7 +437,7 @@
             
               <div class="row gap-10">
                 <div class="col-xs-6 col-sm-6 mb-10">
-                  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                  <button onClick="sendAjax(3)" class="btn btn-primary btn-block">Submit</button>
                 </div>
                 <div class="col-xs-6 col-sm-6 mb-10">
                   <button type="submit" class="btn btn-primary btn-block btn-inverse" data-dismiss="modal" aria-label="Close">Cancel</button>
@@ -443,7 +445,6 @@
               </div>
               
             </div>
-          </form>
           <!-- End # Login Form -->               
         </div>
         <!-- End # DIV Form -->
@@ -473,6 +474,51 @@
 <script type="text/javascript" src="js/validator.min.js"></script>
 <script type="text/javascript" src="js/jquery.raty.js"></script> 
 <script type="text/javascript" src="js/customs.js"></script>
+
+
+<script type="text/javascript" src="js/formvalidation.js"></script>
+
+<script>
+   var locations= [
+        {"id": "fullname", "type": "text", "form":3},
+        {"id": "email", "type": "text", "form":3},
+        {"id": "location", "type": "text", "form":3},
+        {"id": "fullname1", "type": "text", "form":1},
+        {"id": "email1", "type": "text", "form":1},
+        {"id": "location1", "type": "text", "form":1},
+        {"id": "hospitalName", "type": "text", "form":2},
+        {"id": "hospitalEmail", "type": "email", "form":2},
+        {"id": "hospitalNo", "type": "text", "form":2}
+
+      ];
+
+    var validations=[
+      {"id": "fullname", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "fullname", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "email", "validation": "length", "operator": "leq", "number":40},
+      {"id": "location", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "location", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email", "validation": "reg", "reg":"email"},
+      {"id": "fullname1", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "fullname1", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email1", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "email1", "validation": "length", "operator": "leq", "number":40},
+      {"id": "location1", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "location1", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email1", "validation": "reg", "reg":"email"},
+      {"id": "hospitalName", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "hospitalName", "validation": "length", "operator": "leq", "number":40},
+      {"id": "hospitalEmail", "validation": "reg", "reg":"email"},
+      {"id": "hospitalEmail", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "hospitalEmail", "validation": "length", "operator": "leq", "number":40},
+      {"id": "hospitalNo", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "hospitalNo", "validation": "length", "operator": "leq", "number":10},
+      {"id": "hospitalNo", "validation": "reg", "reg":"phone"}
+    ];
+
+    var ajaxinfo=['/preregister.php','POST','/thankyou.html'];
+</script>
 
 
 </body>
