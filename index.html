@@ -740,12 +740,15 @@ give blood,blood donor, donate blood for money,where can i donate blood,blood do
        {"id": "newsletter", "validation": "length", "operator": "notnull", "number":0},
       {"id": "newsletter", "validation": "length", "operator": "leq", "number":40},
      
-      {"id": "newsletter", "validation": "reg", "reg":"email"},
-
+      {"id": "newsletter", "validation": "reg", "reg":"email"}
 
     ];
 
-    var ajaxinfo=['/preregister.php','POST','/thankyou.html'];
+    var ajaxinfo= [
+    	{'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'},
+    	{'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'}
+
+    ]	;
 </script>
 
 <script>

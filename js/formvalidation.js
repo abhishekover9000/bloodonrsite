@@ -293,19 +293,18 @@ function validateForm(form, formlocations){
           // sanitize value
           data[formlocations[i].id]= value;
         }
-        data["form"]= form;
-        console.log(data);
+        console.log(form);
         $.ajax({
         data: JSON.stringify(data),
-        url: ajaxinfo[0],
-        type: ajaxinfo[1],
+        url: ajaxinfo[form-1].url,
+        type: ajaxinfo[form-1].type,
         contentType: "application/json",
         dataType: "json",
         success: function ( data ) {
-            window.location.href=ajaxinfo[2];
+            window.location.href=ajaxinfo[form-1].redirect;
         },
         error: function(data){
-           displayMessage(data.id, data.message, 'red');
+           //displayMessage(data.id, data.message, 'red');
         }
     });
 

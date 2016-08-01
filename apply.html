@@ -517,7 +517,12 @@
       {"id": "hospitalNo", "validation": "reg", "reg":"phone"}
     ];
 
-    var ajaxinfo=['/preregister.php','POST','/thankyou.html'];
+    var ajaxinfo=[
+      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'},
+      {'url': '/php/apply.php','type':'POST','redirect':'/thankyou.html'},      
+      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'}
+    ];
+
 </script>
 
 
