@@ -2851,25 +2851,25 @@ ul.price-summary-list li.total-price {
     padding-right: 15px;
 }
 
-.payment-success {
+.form-success {
     margin: 0 0 40px;
 }
 
-.payment-success .icon {
+.form-success .icon {
     font-size: 56px;
     width: 70px;
     float: left;
 }
 
-.payment-success .content {
+.form-success .content {
     margin-left: 70px;
 }
 
-.payment-success .content h2 {
+.form-success .content h2 {
     margin-bottom: 5px;
 }
 
-.payment-success .content p {
+.form-success .content p {
     font-size: 18px;
     line-height: 24px;
     margin: 0;
@@ -2910,20 +2910,20 @@ ul.book-sum-list li span {
     .confirmation-wrapper {
         padding-right: 0;
     }
-    .payment-success .content h2 {
+    .form-success .content h2 {
         font-size: 20px;
     }
-    .payment-success .content p {
+    .form-success .content p {
         font-size: 17px;
         line-height: 1.4;
     }
 }
 
 @media (max-width: 479px) {
-    .payment-success .content h2 {
+    .form-success .content h2 {
         font-size: 17px;
     }
-    .payment-success .content p {
+    .form-success .content p {
         font-size: 15px;
     }
 }
