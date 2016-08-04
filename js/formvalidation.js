@@ -308,7 +308,9 @@ function validateForm(form, formlocations){
         }
     });
 
-	swal('ajax is sent!');
+	swal({   title: "Sweet!",   
+		text: "Thanks for Registering, You should get an Email, Please check spam filters too.",
+		type: "success" });
 
       }    
     }
