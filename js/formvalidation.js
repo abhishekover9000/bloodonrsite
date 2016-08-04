@@ -308,7 +308,7 @@ function validateForm(form, formlocations){
         }
     });
 
-	alert('ajax is sent!');
+	swal('ajax is sent!');
 
       }    
     }
