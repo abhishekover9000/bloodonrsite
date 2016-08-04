@@ -27,6 +27,25 @@ mysqli_close($conn);
 echo json_encode($data);
 
 
+// send email to applicant
+ini_set( 'SMTP', 'localhost' ); // must be set to your own local ISP
+ini_set( 'smtp_port', '25' ); // assumes no authentication (passwords) required
+ini_set('sendmail_from','socialmedia@bloodonr.com');
+
+
+$title = "Welcome to BlooDonR";
+$message= "Hello " . $fullname . ",<br/>" . "Thanks for your recent application to BlooDonR! <br/> A representative will be in contact shortly. <br/>" . "If you wish to expedite the process to beta, please join at http://www.bloodonr.com/hospitalsurvey.html <br/>" . "Thanks, <br/> The BlooDonR Team"; 
+
+// Always set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n". "X-MSMail-Priority: High";
+
+// More headers
+$headers .= "\r\n". 'X-Mailer: PHP/' . phpversion();
+
+mail($email, $title, $message, $headers, "-fsocialmedia@bloodonr.com");
+
+
 /*
 // send email
 $title= "New Inquiry";

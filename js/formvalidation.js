@@ -64,12 +64,10 @@ function validate(x){
 
 	// find all matching validations
 	var validations= matchValidations(location);
-	console.log(validations);
 
 	// check each validation
 	var isgood= true;
 	for (var i=0; i<validations.length; i++){
-	  console.log('checking '+validations[i].validation +' '+ validations[i].operator + ' for '+ location.id);
 	  // if check fails
 	  if (!check(validations[i])){
 	      isgood=false;
@@ -92,7 +90,6 @@ function findLocation(x){
 
 // Finds validations matching input
 function matchValidations(location){
-	console.log(location);
 	var matches=[];
 	for (var i=0; i<validations.length; i++){
 	  if (validations[i].id == location.id)
@@ -127,18 +124,14 @@ function checkReg(id, reg){
 	 var flag=false;
 	 switch(reg){
 	 	case "email":
-	 		console.log("checking email");
-	 		console.log(value.match(emailreg));
 	 		if (value.match(emailreg) != null) // check email
 	 		{
 	 			flag= true;
 	 			displayMessage(id, '', 'black')
-	 			console.log('matches email');
 	 		}
 	 		else{
 	 			flag = false;
 	 			displayMessage(id, 'Must Add a Valid Email!', 'red')
-	 			console.log('no match email');
 	 		}
 	 		break;
 	 	case "phone":
@@ -150,7 +143,6 @@ function checkReg(id, reg){
 	 		}
 	 		else{
 	 			flag = false;
-	 			console.log('no match phone');
 	 			displayMessage(id, 'Must be Valid 10 Digit US Phone Number!', 'red')
 	 		}
 	 		break;
@@ -172,17 +164,14 @@ function checkLength(id, op, num){
     if (value.length > 0){
       flag=true;
       displayMessage(id,"",'black');
-      console.log('not null success message');
     }
     else{
       // error message display
       displayMessage(id, "Can't leave this blank!", 'red');
-      console.log('not null error message');
     }
     break;
   case "less":
     if (value.length < num){                  
-      console.log('less success');
       flag= true;
     }
     else{
@@ -191,7 +180,6 @@ function checkLength(id, op, num){
     break;
   case "great":
     if (value.length > num){
-      console.log('great success');
       flag= true;
     }
     else{
@@ -200,7 +188,6 @@ function checkLength(id, op, num){
     break;
   case "eq":
     if (value.length == num){
-      console.log('eq success');
       flag= true;
     }
     else{
@@ -269,8 +256,6 @@ function validateForm(form, formlocations){
      		}
      	}
      }
-     console.log('formvalidations are');
-     console.log(formvalidations);
      // check validations
      for (var i=0; i< formvalidations.length; i++){
 	    if (check(formvalidations[i]) == false){
@@ -282,7 +267,6 @@ function validateForm(form, formlocations){
 
  function sendAjax(form){
  	var formlocations = getFormLocations(form);
- 	console.log(formlocations);
     var flag= validateForm(form, formlocations);      
 
            // if flag is good, get data and send request
@@ -293,7 +277,6 @@ function validateForm(form, formlocations){
           // sanitize value
           data[formlocations[i].id]= value;
         }
-        console.log(form);
         $.ajax({
         data: JSON.stringify(data),
         url: ajaxinfo[form-1].url,
@@ -308,10 +291,5 @@ function validateForm(form, formlocations){
         }
     });
 
-	swal({   title: "Sweet!",   
-		text: "Thanks for Registering, You should get an Email, Please check spam filters too.",
-		type: "success" });
-
-      }    
     }
 
