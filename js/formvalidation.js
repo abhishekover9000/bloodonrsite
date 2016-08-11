@@ -104,6 +104,7 @@ function matchValidations(location){
 // display error message - dependencies is input and inputerror class
 function displayMessage(id, message, color){
 	var spanid=id+"error";
+	console.log(spanid);
 	var span= document.getElementById(spanid);
 	span.innerHTML=message;	
 	span.style.color=color;

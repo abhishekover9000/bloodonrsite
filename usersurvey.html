@@ -256,9 +256,10 @@
 
                         <input type="radio" id="1no" name="q1" value="yes"> No </input>
                         <br/>
-                        <input type="text" placeholder="If Yes, how Frequently?"/>
+                        <input type="text" id="1yestext" placeholder="If Yes, how Frequently?"/> <div id="1yestexterror"> </div>
+
                         <br/>
-                        <button type="submit" onClick="proceed(1,2,3)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(1,2,3, [{'id': '1yes','validation': 'length', 'operator': 'notnull', 'number':0}])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
@@ -271,7 +272,7 @@
 
                         <input type="radio" id="2no" name="q2" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="proceed(2,4,8)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(2,4,8, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
@@ -284,7 +285,7 @@
 
                         <input type="radio" id="3no" name="q3" value="yes"> No </input>
                         <br/>
-                        <button type="submit" onClick="proceed(3,7,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(3,7,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
@@ -296,7 +297,7 @@
 
                         <input type="radio" id="4no" name="q4" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="proceed(4,5,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(4,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
@@ -329,7 +330,7 @@
 
                         <input type="radio" id="7no" name="q7" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="proceed(7,5,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(7,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     </div>  
 
@@ -341,7 +342,7 @@
 
                         <input type="radio" id="8no" name="q8" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="proceed(8,4,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(8,4,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     </div>              
 
@@ -541,7 +542,9 @@
 
     var validations=[
       {"id": "fullname", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "fullname", "validation": "length", "operator": "leq", "number":40}
+      {"id": "fullname", "validation": "length", "operator": "leq", "number":40},
+      {"id": "yes1", "validation": "length", "operator": "notnull", "number":0}
+
     ];
 
     var ajaxinfo=[
@@ -551,16 +554,31 @@
     // User Survey Form //
     var totalformitems=8;
 
-    function proceed(item, yes, no){
+    function proceed(item, yes, no, validators){
       var itemyes= document.getElementById(item+"yes");
       var itemno= document.getElementById(item+"no");
+      if (validators.length > 0){
+      var valid= console.log(validators);
+      var id= validators[0].id+"text";
+      console.log(id);
+      var operator= validators[0].operator+"";
+      }
       // nothing is checked
       if (! (itemyes.checked || itemno.checked))
         // display error
-        console.log("nothing checked foo!");
+        displayMessage(item+"error", "red", "must check something!");
       else
-        if (itemyes.checked)
-        displayElement(yes);
+        if (itemyes.checked){
+          if (validators.length > 0){
+            console.log('checkreg');
+            console.log(checkReg(id,operator));
+            if (checkLength(id, operator))
+              displayElement(yes);
+          }
+          else{
+            displayElement(yes);
+          } 
+        }
       else
         displayElement(no);
     }
