@@ -248,101 +248,142 @@
                 
                   <div class="row">
                   
-                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="col-md-4 col-md-offset-4">
                     
                       <div id="1" class="formElement seen">
                         <h4 class="formQuestion"> Do You Donate Blood? </h4>
+                        <div class="form-group">
                         <input type="radio" id="1yes" name="q1" value="yes"> Yes </input>
-
                         <input type="radio" id="1no" name="q1" value="yes"> No </input>
-                        <br/>
-                        <input type="text" id="1yestext" placeholder="If Yes, how Frequently?"/> <div id="1yestexterror"> </div>
-
-                        <br/>
+                        </div>
+                        <div class="form-group">
+                        <input type="text" class="form-control" id="1yestext" placeholder="If Yes, how many times in an year?"/> <div id="1yestexterror"> </div>
+                        </div>
+                        <div class="form-group">
                         <button type="submit" onClick="proceed(1,2,3, [{'id': '1yes','validation': 'length', 'operator': 'notnull', 'number':0}])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        </div>
                       </div>
                     
                     </div>
 
-                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="col-md-4 col-md-offset-4">
                      
                       <div id="2" class="formElement hidden">
                         <h4 class="formQuestion"> Did You Know the Blood you Donate is Being Sold? </h4>
+                        <div class="form-group">
                         <input type="radio" id="2yes" name="q2" value="yes"> Yes </input>
-
                         <input type="radio" id="2no" name="q2" value="no"> No </input>
-                        <br/>
+                        </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="proceed(2,4,8, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
                       </div>
                     
                     </div>
 
-                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="col-md-4 col-md-offset-4">
                     
                       <div id="3" class="formElement hidden">
                         <h4 class="formQuestion"> Would You Donate Blood if You got Compensated for it? </h4>
+                                                <div class="form-group">
+
                         <input type="radio" id="3yes" name="q3" value="yes"> Yes </input>
 
                         <input type="radio" id="3no" name="q3" value="yes"> No </input>
-                        <br/>
+                        </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="proceed(3,7,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
                       </div>
                     
                     </div>
-                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="col-md-4 col-md-offset-4">
                     
                       <div id="4" class="formElement hidden">
                         <h4 class="formQuestion"> Do You Want to Join Our Beta Group and Help Us Do Something About It? </h4>
+                                                <div class="form-group">
+
                         <input type="radio" id="4yes" name="q4" value="yes"> Yes </input>
 
                         <input type="radio" id="4no" name="q4" value="no"> No </input>
-                        <br/>
+                        </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="proceed(4,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
                       </div>
                     
                     </div>
 
-                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="col-md-4 col-md-offset-4">
                     
                       <div id="5" class="formElement hidden">
                         <h4 class="formQuestion"> Whats the Best Way to Get in Contact? </h4>
-                        <input type="text" placeholder="Phone" />
-                        <input type="text" placeholder="Email" />
-                        <br/>
+                        <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Phone" />
+                        </div>
+
+                                                <div class="form-group">
+
+                                      <input type="text" class="form-control" placeholder="Email" />
+                                      </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="submitSurvey()" class="btn btn-primary btm-sm mt-5">Let's Go!</button>
+                      </div>
                       </div>
                     
                     </div>
 
-                   <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                   <div class="col-md-4 col-md-offset-4">
 
                    <div id="6" class="formElement hidden">
-                        <h4 class="formQuestion"> Thanks for Your Time </h4>
-                        <a href="/" class="btn btn-primary btm-sm mt-5">Return to BlooDonr</a>                    
+                   <div class="form-success">
+                  <div class="icon">
+                    <i class="pe-7s-check text-success"></i>
+                  </div>
+                <h4 class="formQuestion heading uppercase mt-0 text-success">Thanks for Your Time</h4>
+                </div>
+                <div class="btn-group">
+                        <a href="/" class="btn btn-info">Browse Faq's</a>  
+                        <a href="/" class="btn btn-success">Go to Home</a>   
+                        </div>                 
                     </div>
                   </div>
 
-                  <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                  <div class="col-md-4 col-md-offset-4">
                     
                       <div id="7" class="formElement hidden">
                         <h4 class="formQuestion"> OK do you want to join our beta group to make sure your voice gets heard?</h4>
+                                                <div class="form-group">
+
                         <input type="radio" id="7yes" name="q7" value="yes"> Yes </input>
 
                         <input type="radio" id="7no" name="q7" value="no"> No </input>
-                        <br/>
+                        </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="proceed(7,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
                       </div>
                     </div>  
 
-                  <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                  <div class="col-md-4 col-md-offset-4">
                     
                       <div id="8" class="formElement hidden">
                         <h4 class="formQuestion"> Now that you know, are you ready for a fairer system?</h4>
+                                                <div class="form-group">
+
                         <input type="radio" id="8yes" name="q8" value="yes"> Yes </input>
 
                         <input type="radio" id="8no" name="q8" value="no"> No </input>
-                        <br/>
+                        </div>
+                                                <div class="form-group">
+
                         <button type="submit" onClick="proceed(8,4,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
                       </div>
                     </div>              
 
