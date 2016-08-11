@@ -238,7 +238,7 @@
                 
                 <div class="section-title">
                 
-                  <h3>Please go through Survey and make us better</h3>
+                  <h3></h3>
                   
                 </div>
                 
@@ -250,71 +250,100 @@
                   
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div class="form-group">
-                        <label for="">Do you donate blood now? If so how frequently?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
-                      </div>
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="">Did you know blood you donate is being sold?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
-                      </div>
-                      </div>
+                      <div id="1" class="formElement">
+                        <h4 class="formQuestion"> Do You Donate Blood? </h4>
+                        <input type="radio" name="q1" value="yes" onClick="displayYes()"> Yes </input>
 
-                     <div class="form-group">
-                        <label for="">Do you want to join our beta group and help us do something about it?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
+                        <input type="radio" name="q1" value="yes" onClick="hideYes()"> No </input>
+                        <br/>
+                        <input type="text" placeholder="If Yes, how Frequently?"/>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
-                      </div>
-                      
-                     <div class="form-group">
-                        <label for="">Now that you know, are you ready for a fairer system?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
-                      </div>
-                      </div>
-
-                    <div class="form-group">
-                        <label for="">Would you donate blood if you got compensated for it?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
-                      </div>
-                      </div>
-
-                    <div class="form-group">
-                        <label for="">OK do you want to join our beta group to make sure your voice gets heard?</label>
-                      <div class="checkbox">
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">Yes</label>
-                        <input id="" type="checkbox" class="form-control" data-error="Response is required">
-                        <label for="">No</label>
-                      </div>
-                      </div>
-
-                  
-
-                      <button type="submit" onClick="" class="btn btn-primary mt-5">Submit</button>
                     
                     </div>
+
+                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="2" class="formElement">
+                        <h4 class="formQuestion"> Did You Know the Blood you Donate is Being Sold? </h4>
+                        <input type="radio" name="q2" value="yes"> Yes </input>
+
+                        <input type="radio" name="q2" value="yes"> No </input>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
+                    
+                    </div>
+
+                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="3" class="formElement">
+                        <h4 class="formQuestion"> Would You Donate Blood if You got Compensated for it? </h4>
+                        <input type="radio" name="q3" value="yes"> Yes </input>
+
+                        <input type="radio" name="q3" value="yes"> No </input>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
+                    
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="4" class="formElement">
+                        <h4 class="formQuestion"> Do You Want to Join Our Beta Group and Help Us Do Something About It? </h4>
+                        <input type="radio" name="q4" value="yes"> Yes </input>
+
+                        <input type="radio" name="q4" value="no"> No </input>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
+                    
+                    </div>
+
+                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="5" class="formElement">
+                        <h4 class="formQuestion"> Whats the Best Way to Get in Contact? </h4>
+                        <input type="text" placeholder="Phone" />
+                        <input type="text" placeholder="Email" />
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Let's Go!</button>
+                      </div>
+                    
+                    </div>
+
+                   <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+
+                   <div id="6" class="formElement">
+                        <h4 class="formQuestion"> Thanks for Your Time </h4>
+                        <a href="/" class="btn btn-primary btm-sm mt-5">Return to BlooDonr</a>                    
+                    </div>
+                  </div>
+                  <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="7" class="formElement">
+                        <h4 class="formQuestion"> OK do you want to join our beta group to make sure your voice gets heard?</h4>
+                        <input type="radio" name="q4" value="yes"> Yes </input>
+
+                        <input type="radio" name="q4" value="no"> No </input>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
+                    </div>  
+
+                  <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    
+                      <div id="8" class="formElement">
+                        <h4 class="formQuestion"> Now that you know, are you ready for a fairer system?</h4>
+                        <input type="radio" name="q4" value="yes"> Yes </input>
+
+                        <input type="radio" name="q4" value="no"> No </input>
+                        <br/>
+                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                      </div>
+                    </div>              
+
                     
                   </div>
 
@@ -443,15 +472,15 @@
               <h4 class="text-center heading mt-10 mb-20">Outside of the Bay?</h4>
               <p>Feel free to register</p>
               
-              <div class="form-group"> 
+              <div class="form-group survey-item"> 
                 <input id="email" class="form-control" placeholder="Email" type="text" required onClick="validate('email')"> 
                 <span id="emailerror"> </span>
               </div>
-              <div class="form-group"> 
+              <div class="form-group survey-item"> 
                 <input id="fullname" class="form-control" placeholder="Full Name" type="text" required onClick="validate('fullname')"> 
                 <span id="fullnameerror"> </span>
               </div>
-              <div class="form-group"> 
+              <div class="form-group survey-item"> 
                 <input id="location" class="form-control" placeholder="Location" type="text" required onClick="validate('location')">
                 <span id="locationerror"> </span>
               </div>
@@ -505,48 +534,22 @@
 
 <script>
    var locations= [
-        {"id": "fullname", "type": "text", "form":3},
-        {"id": "email", "type": "text", "form":3},
-        {"id": "location", "type": "text", "form":3},
-        {"id": "fullname1", "type": "text", "form":1},
-        {"id": "email1", "type": "text", "form":1},
-        {"id": "location1", "type": "text", "form":1},
-        {"id": "hospitalName", "type": "text", "form":2},
-        {"id": "hospitalEmail", "type": "email", "form":2},
-        {"id": "hospitalNo", "type": "text", "form":2}
+        {"id": "fullname", "type": "text", "form":3}
 
       ];
 
     var validations=[
       {"id": "fullname", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "fullname", "validation": "length", "operator": "leq", "number":40},
-      {"id": "email", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "email", "validation": "length", "operator": "leq", "number":40},
-      {"id": "location", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "location", "validation": "length", "operator": "leq", "number":40},
-      {"id": "email", "validation": "reg", "reg":"email"},
-      {"id": "fullname1", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "fullname1", "validation": "length", "operator": "leq", "number":40},
-      {"id": "email1", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "email1", "validation": "length", "operator": "leq", "number":40},
-      {"id": "location1", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "location1", "validation": "length", "operator": "leq", "number":40},
-      {"id": "email1", "validation": "reg", "reg":"email"},
-      {"id": "hospitalName", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "hospitalName", "validation": "length", "operator": "leq", "number":40},
-      {"id": "hospitalEmail", "validation": "reg", "reg":"email"},
-      {"id": "hospitalEmail", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "hospitalEmail", "validation": "length", "operator": "leq", "number":40},
-      {"id": "hospitalNo", "validation": "length", "operator": "notnull", "number":0},
-      {"id": "hospitalNo", "validation": "length", "operator": "leq", "number":10},
-      {"id": "hospitalNo", "validation": "reg", "reg":"phone"}
+      {"id": "fullname", "validation": "length", "operator": "leq", "number":40}
     ];
 
     var ajaxinfo=[
-      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'},
-      {'url': '/php/apply.php','type':'POST','redirect':'/thankyou.html'},      
       {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'}
     ];
+
+    // User Survey Form //
+
+
 
 </script>
 

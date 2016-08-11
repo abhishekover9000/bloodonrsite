@@ -593,9 +593,6 @@
 
 input[type='radio'],
 input[type='checkbox'] {
-    opacity: 0;
-    display: none;
-    float: left;
     width: 18px;
 }
 
