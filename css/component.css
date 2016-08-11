@@ -591,6 +591,14 @@
     margin-left: 5px;
 }
 
+.hidden{
+    display:none;
+}
+
+.seen{
+    display:inline;
+}
+
 input[type='radio'],
 input[type='checkbox'] {
     width: 18px;

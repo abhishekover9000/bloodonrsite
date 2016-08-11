@@ -250,97 +250,98 @@
                   
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="1" class="formElement">
+                      <div id="1" class="formElement seen">
                         <h4 class="formQuestion"> Do You Donate Blood? </h4>
-                        <input type="radio" name="q1" value="yes" onClick="displayYes()"> Yes </input>
+                        <input type="radio" id="1yes" name="q1" value="yes"> Yes </input>
 
-                        <input type="radio" name="q1" value="yes" onClick="hideYes()"> No </input>
+                        <input type="radio" id="1no" name="q1" value="yes"> No </input>
                         <br/>
                         <input type="text" placeholder="If Yes, how Frequently?"/>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(1,2,3)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
 
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                    
-                      <div id="2" class="formElement">
+                     
+                      <div id="2" class="formElement hidden">
                         <h4 class="formQuestion"> Did You Know the Blood you Donate is Being Sold? </h4>
-                        <input type="radio" name="q2" value="yes"> Yes </input>
+                        <input type="radio" id="2yes" name="q2" value="yes"> Yes </input>
 
-                        <input type="radio" name="q2" value="yes"> No </input>
+                        <input type="radio" id="2no" name="q2" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(2,4,8)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
 
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="3" class="formElement">
+                      <div id="3" class="formElement hidden">
                         <h4 class="formQuestion"> Would You Donate Blood if You got Compensated for it? </h4>
-                        <input type="radio" name="q3" value="yes"> Yes </input>
+                        <input type="radio" id="3yes" name="q3" value="yes"> Yes </input>
 
-                        <input type="radio" name="q3" value="yes"> No </input>
+                        <input type="radio" id="3no" name="q3" value="yes"> No </input>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(3,7,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="4" class="formElement">
+                      <div id="4" class="formElement hidden">
                         <h4 class="formQuestion"> Do You Want to Join Our Beta Group and Help Us Do Something About It? </h4>
-                        <input type="radio" name="q4" value="yes"> Yes </input>
+                        <input type="radio" id="4yes" name="q4" value="yes"> Yes </input>
 
-                        <input type="radio" name="q4" value="no"> No </input>
+                        <input type="radio" id="4no" name="q4" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(4,5,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     
                     </div>
 
                     <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="5" class="formElement">
+                      <div id="5" class="formElement hidden">
                         <h4 class="formQuestion"> Whats the Best Way to Get in Contact? </h4>
                         <input type="text" placeholder="Phone" />
                         <input type="text" placeholder="Email" />
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Let's Go!</button>
+                        <button type="submit" onClick="submitSurvey()" class="btn btn-primary btm-sm mt-5">Let's Go!</button>
                       </div>
                     
                     </div>
 
                    <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 
-                   <div id="6" class="formElement">
+                   <div id="6" class="formElement hidden">
                         <h4 class="formQuestion"> Thanks for Your Time </h4>
                         <a href="/" class="btn btn-primary btm-sm mt-5">Return to BlooDonr</a>                    
                     </div>
                   </div>
+
                   <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="7" class="formElement">
+                      <div id="7" class="formElement hidden">
                         <h4 class="formQuestion"> OK do you want to join our beta group to make sure your voice gets heard?</h4>
-                        <input type="radio" name="q4" value="yes"> Yes </input>
+                        <input type="radio" id="7yes" name="q7" value="yes"> Yes </input>
 
-                        <input type="radio" name="q4" value="no"> No </input>
+                        <input type="radio" id="7no" name="q7" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(7,5,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     </div>  
 
                   <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     
-                      <div id="8" class="formElement">
+                      <div id="8" class="formElement hidden">
                         <h4 class="formQuestion"> Now that you know, are you ready for a fairer system?</h4>
-                        <input type="radio" name="q4" value="yes"> Yes </input>
+                        <input type="radio" id="8yes" name="q8" value="yes"> Yes </input>
 
-                        <input type="radio" name="q4" value="no"> No </input>
+                        <input type="radio" id="8no" name="q8" value="no"> No </input>
                         <br/>
-                        <button type="submit" onClick="" class="btn btn-primary btm-sm mt-5">Proceed</button>
+                        <button type="submit" onClick="proceed(8,4,6)" class="btn btn-primary btm-sm mt-5">Proceed</button>
                       </div>
                     </div>              
 
@@ -548,8 +549,40 @@
     ];
 
     // User Survey Form //
+    var totalformitems=8;
 
+    function proceed(item, yes, no){
+      var itemyes= document.getElementById(item+"yes");
+      var itemno= document.getElementById(item+"no");
+      // nothing is checked
+      if (! (itemyes.checked || itemno.checked))
+        // display error
+        console.log("nothing checked foo!");
+      else
+        if (itemyes.checked)
+        displayElement(yes);
+      else
+        displayElement(no);
+    }
 
+    function displayElement(item){
+
+      for (var i=1; i< totalformitems+1; i++){
+        if (i == item){
+          $("#"+item).removeClass('hidden');
+          $("#"+item).addClass('seen');
+          console.log("adding"+item);
+        }
+        else{
+          $('#'+i).removeClass("seen");
+          $('#'+i).addClass("hidden");
+        }
+      }
+    }
+
+    window.onready= function(){
+      displayElement('1');
+    }
 
 </script>
 
