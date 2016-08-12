@@ -2858,7 +2858,6 @@ ul.price-summary-list li.total-price {
 .form-success .icon {
     font-size: 56px;
     width: 70px;
-    float: left;
 }
 
 .form-success .content {
@@ -3764,3 +3763,14 @@ ul.static-page-menu li.active a {
 }
 
 @media (max-width: 479px) {}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid
+  {
+    text-align: center;
+  }
+}
+
+.container-fluid{
+    text-align: center;
+}
