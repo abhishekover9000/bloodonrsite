@@ -13,20 +13,44 @@ $conn= mysqli_connect('localhost',$username,$password,$database) or die ("Cant c
 
  $data =json_decode(file_get_contents("php://input"), true);
  
- // Custom Variables //
- $fullname= sanitize($conn, $data['fullname2']);
- $email = sanitize($conn, $data['email2']);
- $location = sanitize($conn, $data['location2']);
-
  
-$query="INSERT INTO Usersurvey (fullname ,email, location) VALUES ('$fullname', '$email', '$location')";
+ $phone= sanitize($conn, $data['phone']);
+ $email = sanitize($conn, $data['email']);
+ $survey = $data['survey'];
+
+
+function getData($question, $survey){
+	$obj= $survey[$question-1];
+	if ($obj['no'] == false && $obj['yes']== false)
+		return "notused";
+	else if ($obj['yes'])
+		return "Yes";
+	else 
+		return "No";
+}
+
+$one= getData(1, $survey);
+$two= getData(2, $survey);
+$three= getData(3, $survey);
+$four= getData(4, $survey);
+$seven= getData(5, $survey);
+$eight = getData(6, $survey);
+
+if ($one == "Yes"){
+	$oneyestext=$survey[0]['yestext'];
+}
+else
+	$oneyestext=null;
+ 
+$query="INSERT INTO UserSurvey (email ,phone, one, two, three, four, seven, eight, oneyestext) VALUES ('$email', '$phone', '$one', '$two', '$three', '$four', '$seven', '$eight', '$oneyestext')";
 
 $finalprod= mysqli_query($conn, $query) or die ( mysqli_error());
 
 mysqli_close($conn);
 
+
 // return statement
-echo json_encode($data);
+echo json_encode([$one, $two, $three, $four, $seven, $eight, $email, $phone]);
 
 
 /*

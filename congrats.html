@@ -197,11 +197,9 @@
         
       </nav>
       <!-- end Navbar (Header) -->
-
     </header>
-    
     <div class="clear"></div>
-  
+    
     <!-- start Main Wrapper -->
     <div class="main-wrapper">
     
@@ -214,8 +212,7 @@
           
             <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
             
-              <h1 class="hero-title">User Survey</h1>
-            
+              <h1 class="hero-title">Welcome Aboard!</h1>
               
             </div>
             
@@ -225,186 +222,65 @@
         
       </div>
       <!-- end Page title -->
-
+      
       <div class="content-wrapper">
-  
-                        
-        
-          <div class="container">
+      
+        <div class="container">
+      
+          <div class="row">
           
-            <div class="row">
-
-              <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            <div class="col-sm-4 col-md-3">
+            
+              <aside class="sidebar">
+              
+                <div class="sidebar-inner no-border for-static-page">
                 
-                <div class="section-title">
-                
-                  <h3></h3>
+                  <div class="sidebar-module">
                   
+                    <h4 class="sidebar-title">Menu</h4>
+                    <ul class="static-page-menu">
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="apply.html">Hospitals Apply</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    
+                  </div>
+                
                 </div>
                 
-              </div>
+              </aside>
+            </div>
             
-            </div>            
+            <div class="col-sm-8 col-md-9">
+
                 
-                  <div class="row">
-                  
-                    <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="1" class="formElement seen">
-                        <h4 class="formQuestion"> Do You Donate Blood? </h4>
-                        <div class="form-group">
-                        <input type="radio" id="1yes" name="q1" value="yes"> Yes </input>
-                        <input type="radio" id="1no" name="q1" value="yes"> No </input>
-                        </div>
-                        <div class="form-group">
-                        <input type="text" class="form-control" id="1yestext" placeholder="If Yes, how many times in an year?"/> <div id="1yestexterror"> </div>
-                        </div>
-                        <div class="form-group">
-                        <button type="submit" onClick="proceed(1,2,3, [{'id': '1yes','validation': 'length', 'operator': 'notnull', 'number':0}])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                        </div>
-                      </div>
-                    
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-4">
-                     
-                      <div id="2" class="formElement hidden">
-                        <h4 class="formQuestion"> Did You Know the Blood you Donate is Being Sold? </h4>
-                        <div class="form-group">
-                        <input type="radio" id="2yes" name="q2" value="yes"> Yes </input>
-                        <input type="radio" id="2no" name="q2" value="no"> No </input>
-                        </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="proceed(2,4,8, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                      </div>
-                      </div>
-                    
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="3" class="formElement hidden">
-                        <h4 class="formQuestion"> Would You Donate Blood if You got Compensated for it? </h4>
-                                                <div class="form-group">
-
-                        <input type="radio" id="3yes" name="q3" value="yes"> Yes </input>
-
-                        <input type="radio" id="3no" name="q3" value="yes"> No </input>
-                        </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="proceed(3,7,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                      </div>
-                      </div>
-                    
-                    </div>
-                    <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="4" class="formElement hidden">
-                        <h4 class="formQuestion"> Do You Want to Join Our Beta Group and Help Us Do Something About It? </h4>
-                                                <div class="form-group">
-
-                        <input type="radio" id="4yes" name="q4" value="yes"> Yes </input>
-
-                        <input type="radio" id="4no" name="q4" value="no"> No </input>
-                        </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="proceed(4,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                      </div>
-                      </div>
-                    
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="5" class="formElement hidden">
-                        <h4 class="formQuestion"> Whats the Best Way to Get in Contact? </h4>
-                        <div class="form-group">
-                        <input type="number" class="form-control"  id="surveyphone" placeholder="Phone" />
-                        <span id="surveyphoneerror"> </span>
-
-                        </div>
-
-                                                <div class="form-group">
-
-                                      <input type="text" id="surveyemail" class="form-control" placeholder="Email" />
-                                      <span id="surveyemailerror"> </span>
-                                      </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="submitSurvey()" class="btn btn-primary btm-sm mt-5">Let's Go!</button>
-                      </div>
-                      </div>
-                    
-                    </div>
-
-                   <div class="col-md-4 col-md-offset-4">
-
-                   <div id="6" class="formElement hidden">
-                   <div class="form-success">
+             <div class="form-success">
+                
                   <div class="icon">
                     <i class="pe-7s-check text-success"></i>
                   </div>
-                <h4 class="formQuestion heading uppercase mt-0 text-success">Thanks for Your Time</h4>
-                </div>
-                <div class="btn-group">
-                        <a href="/" class="btn btn-info">Browse Faq's</a>  
-                        <a href="/" class="btn btn-success">Go to Home</a>   
-                        </div>                 
-                    </div>
+                
+                  <div class="content">
+                    
+                    <h4 class="heading uppercase mt-0 text-success">Congratulations on becoming a member of our limited beta! A BlooDonR rep will be in contact with you shortly to schedule a time to meet in person or online. Thanks for playing a part! </h4>
+                  
                   </div>
+                  
+                </div>                
+            
+            </div>
 
-                  <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="7" class="formElement hidden">
-                        <h4 class="formQuestion"> OK do you want to join our beta group to make sure your voice gets heard?</h4>
-                                                <div class="form-group">
-
-                        <input type="radio" id="7yes" name="q7" value="yes"> Yes </input>
-
-                        <input type="radio" id="7no" name="q7" value="no"> No </input>
-                        </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="proceed(7,5,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                      </div>
-                      </div>
-                    </div>  
-
-                  <div class="col-md-4 col-md-offset-4">
-                    
-                      <div id="8" class="formElement hidden">
-                        <h4 class="formQuestion"> Now that you know, are you ready for a fairer system?</h4>
-                                                <div class="form-group">
-
-                        <input type="radio" id="8yes" name="q8" value="yes"> Yes </input>
-
-                        <input type="radio" id="8no" name="q8" value="no"> No </input>
-                        </div>
-                                                <div class="form-group">
-
-                        <button type="submit" onClick="proceed(8,4,6, [])" class="btn btn-primary btm-sm mt-5">Proceed</button>
-                      </div>
-                      </div>
-                    </div>              
-
-                    
-                  </div>
-
-                </div>
-              
-              </div>
-                        
           </div>
-          
+
         </div>
         
+      </div>
       
 
     </div>
     <!-- end Main Wrapper -->
+
 
     <footer class="footer">
       
@@ -422,7 +298,7 @@
               
               <p class="footer-address">2040 Martin Ave<br/>Santa Clara, CA 95050<br/> <i class="fa fa-phone"></i> +66 28 878 5452 <br/><br/> <i class="fa fa-envelope-o"></i> <a href="#">info@bloodonr.com</a></p>
               
-             <div class="footer-social">
+              <div class="footer-social">
               
                 <a href="#" data-toggle="tooltip" data-placement="top" title="BlooDonR Facebook"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/@blooDonr" data-toggle="tooltip" data-placement="top" title="BlooDonR Twitter"><i class="fa fa-twitter"></i></a>
@@ -472,7 +348,7 @@
                   
                 </div>
                 
-               
+                
                 
               </div>
 
@@ -496,6 +372,66 @@
   </div>
   <!-- end Back To Top -->
 
+  <!-- BEGIN # MODAL LOGIN -->
+  <div class="modal fade modal-login modal-border-transparent" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <button type="button" class="btn btn-close close" data-dismiss="modal" aria-label="Close">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        
+        <div class="clear"></div>
+        
+        <!-- Begin # DIV Form -->
+        <div id="modal-login-form-wrapper">
+          
+          <!-- Begin # Login Form -->         
+            <div class="modal-body pb-5">
+          
+              <h4 class="text-center heading mt-10 mb-20">Pre Register</h4>
+              
+              <div class="form-group"> 
+                <input id="fullname" class="form-control" placeholder="Full Name" type="text" onKeyUp="validate('fullname')" required> 
+                <span id="fullnameerror"> </span>
+              </div>
+              <div class="form-group"> 
+                <input id="email" class="form-control" placeholder="Email" type="email" onKeyUp="validate('email')"required> 
+                <span id="emailerror"> </span>
+              </div>
+              <div class="form-group"> 
+                <input id="location" class="form-control" placeholder="Location" type="text" onKeyUp="validate('location')"required> 
+                <span id="locationerror"> </span>
+              </div>
+            
+            </div>
+            
+            <div class="modal-footer">
+            
+              <div class="row gap-10">
+                <div class="col-xs-6 col-sm-6 mb-10">
+                  <button onClick="sendAjax(1)" class="btn btn-primary btn-block">Pre Register</button>
+                </div>
+                <div class="col-xs-6 col-sm-6 mb-10">
+                  <button type="submit" class="btn btn-primary btn-block btn-inverse" data-dismiss="modal" aria-label="Close">Cancel</button>
+                </div>
+              </div>
+              <div class="text-left">
+                Not in Bay Area? 
+                <button data-toggle="modal" href="#applyModal" type="button" class="btn btn-link">Register</button>
+              </div>
+              
+            </div>
+          <!-- End # Login Form -->
+                
+        </div>
+        <!-- End # DIV Form -->
+                
+      </div>
+    </div>
+  </div>
+  <!-- END # MODAL LOGIN -->
+
 
     <!-- BEGIN # MODAL LOGIN -->
   <div class="modal fade modal-login modal-border-transparent" id="applyModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -511,24 +447,23 @@
         <!-- Begin # DIV Form -->
         <div id="modal-login-form-wrapper">
           
-          <!-- Begin # Login Form -->
-          
+          <!-- Begin # Login Form -->         
             <div class="modal-body pb-5">
           
               <h4 class="text-center heading mt-10 mb-20">Outside of the Bay?</h4>
-              <p>Feel free to register</p>
+              <p>Although we are starting the SF Bay, we would love to hear from you! Register now to get your city to the top of our expansion list! </p>
               
-              <div class="form-group survey-item"> 
-                <input id="email" class="form-control" placeholder="Email" type="text" required onClick="validate('email')"> 
-                <span id="emailerror"> </span>
+              <div class="form-group"> 
+                <input id="outemail" class="form-control" placeholder="Email" type="text" onKeyUp="validate('outemail')"required> 
+                <span id="outemailerror"> </span>
               </div>
-              <div class="form-group survey-item"> 
-                <input id="fullname" class="form-control" placeholder="Full Name" type="text" required onClick="validate('fullname')"> 
-                <span id="fullnameerror"> </span>
+              <div class="form-group"> 
+                <input id="outfullname" class="form-control" placeholder="Full Name" type="text" onKeyUp="validate('outfullname')" required> 
+                <span id="outfullnameerror"> </span>
               </div>
-              <div class="form-group survey-item"> 
-                <input id="location" class="form-control" placeholder="Location" type="text" required onClick="validate('location')">
-                <span id="locationerror"> </span>
+              <div class="form-group"> 
+                <input id="outlocation" class="form-control" placeholder="Location" onKeyUp="validate('outlocation')" type="text" required>
+                <span id="outlocationerror"> </span>
               </div>
             
             </div>
@@ -537,7 +472,7 @@
             
               <div class="row gap-10">
                 <div class="col-xs-6 col-sm-6 mb-10">
-                  <button onClick="sendAjax(3)" class="btn btn-primary btn-block">Submit</button>
+                  <button onClick="sendAjax(4)" class="btn btn-primary btn-block">Submit</button>
                 </div>
                 <div class="col-xs-6 col-sm-6 mb-10">
                   <button type="submit" class="btn btn-primary btn-block btn-inverse" data-dismiss="modal" aria-label="Close">Cancel</button>
@@ -557,6 +492,7 @@
 
 
 <!-- JS -->
+<script src="sweetalert/dist/sweetalert.min.js"></script> 
 <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -572,128 +508,69 @@
 <script type="text/javascript" src="js/readmore.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/formvalidation.js"></script>
 <script type="text/javascript" src="js/jquery.raty.js"></script> 
 <script type="text/javascript" src="js/customs.js"></script>
 
-
-<script type="text/javascript" src="js/formvalidation.js"></script>
-
 <script>
    var locations= [
-        {"id": "fullname", "type": "text", "form":3}
+        {"id": "fullname", "type": "text", "form":1},
+        {"id": "email", "type": "text", "form":1},
+        {"id": "location", "type": "text", "form":1},
+        {"id": "fullname2", "type": "text", "form":2},
+        {"id": "email2", "type": "text", "form":2},
+        {"id": "location2", "type": "text", "form":2},
+        {"id": "newsletter", "type": "text", "form":3},
+        {"id": "outfullname", "type": "text", "form":4},
+        {"id": "outemail", "type": "text", "form":4},
+        {"id": "outlocation", "type": "text", "form":4}
 
       ];
 
     var validations=[
       {"id": "fullname", "validation": "length", "operator": "notnull", "number":0},
       {"id": "fullname", "validation": "length", "operator": "leq", "number":40},
-      {"id": "yes1", "validation": "length", "operator": "notnull", "number":0}
-
-    ];
-
-    var ajaxinfo=[
-      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'}
-    ];
-
-    // User Survey Form //
-    var totalformitems=8;
-
-    function proceed(item, yes, no, validators){
-      var itemyes= document.getElementById(item+"yes");
-      var itemno= document.getElementById(item+"no");
-      if (validators.length > 0){
-      var valid= console.log(validators);
-      var id= validators[0].id+"text";
-      var operator= validators[0].operator+"";
-      }
-      // nothing is checked
-      if (! (itemyes.checked || itemno.checked))
-        // display error
-        displayMessage(item+"error", "red", "must check something!");
-      else
-        if (itemyes.checked){
-          if (validators.length > 0){ // not null check
-            if (checkLength(id, operator))
-              displayElement(yes);
-          }
-          else{
-            displayElement(yes);
-          } 
-        }
-      else{
-        displayElement(no);
-      }
-    }
-
-    function displayElement(item){
-
-      for (var i=1; i< totalformitems+1; i++){
-        if (i == item){
-          $("#"+item).removeClass('hidden');
-          $("#"+item).addClass('seen');
-        }
-        else{
-          $('#'+i).removeClass("seen");
-          $('#'+i).addClass("hidden");
-        }
-      }
-    }
-
-    function submitSurvey(){
-      // get data object
-      var survey=[];
-      for (var i=1; i<totalformitems+1; i++){
-        if (i != 5 && i != 6){
-          var yes= document.getElementById(i+"yes").checked;
-          var no= document.getElementById(i+"no").checked;
-          // check if yes has input
-          if (document.getElementById(i+'yestext') != null)
-            var yestext= document.getElementById(i+'yestext').value;
-          else
-            var yestext=null;
-          // check if no has input 
-          if (document.getElementById(i+'notext') != null)
-            var notext= document.getElementById(i+'notext').value;
-          else
-            var notext= null;
-
-          var item={"question":i, "yes": yes, "no": no, "yestext": yestext, "notext": notext};
-          survey.push(item);
-        }
-      }
-      // get contact info
-      var email= document.getElementById("surveyemail");
-      var phone= document.getElementById("surveyphone");
-
-      if (checkLength("surveyemail","notnull", 0) && checkLength("surveyphone","notnull",0) && checkReg("surveyphone","phone") && checkReg("surveyemail", "email"))
-        var flag = true;
-      else
-        var flag = false;
-
-      // regexpression
-
-      data={"email": email.value, "phone": phone.value, "survey": survey};
+      {"id": "email", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "email", "validation": "length", "operator": "leq", "number":40},
+      {"id": "location", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "location", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email", "validation": "reg", "reg":"email"},
+      {"id": "fullname2", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "fullname2", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email2", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "email2", "validation": "length", "operator": "leq", "number":40},
+      {"id": "location2", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "location2", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email2", "validation": "reg", "reg":"email"},
+      {"id": "outfullname", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "outfullname", "validation": "length", "operator": "leq", "number":40},
+      {"id": "outemail", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "outemail", "validation": "length", "operator": "leq", "number":40},
+      {"id": "outlocation", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "outlocation", "validation": "length", "operator": "leq", "number":40},
+      {"id": "email", "validation": "reg", "reg":"email"},      
+       {"id": "newsletter", "validation": "length", "operator": "notnull", "number":0},
+      {"id": "newsletter", "validation": "length", "operator": "leq", "number":40},
      
-      //send ajax
-      if (flag == true)
-        { $.ajax({
-        data: JSON.stringify(data),
-        url: `php/usersurvey.php`,
-        type: 'POST',
-        contentType: "application/json",
-        dataType: "json",
-        success: function ( data ) {
-          window.location.href = "/congrats.html";
-          //data
-        },
-        error: function(data){
-          console.log(data);
-          console.log("error");
-           //displayMessage(data.id, data.message, 'red');
-        }
-      });
-    }
-  }
+      {"id": "newsletter", "validation": "reg", "reg":"email"}
+
+    ];
+
+    var ajaxinfo= [
+      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'},
+      {'url': '/php/preregister.php','type':'POST','redirect':'/thankyou.html'}
+
+    ] ;
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81675044-1', 'auto');
+  ga('send', 'pageview');
 
 </script>
 
