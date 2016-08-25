@@ -3476,6 +3476,9 @@ ul.comment-item ul {
     font-size: 56px;
 }
 
+.title-center{
+    text-align: center;
+}
 
 /**
  * Footer
