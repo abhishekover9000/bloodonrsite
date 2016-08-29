@@ -2861,7 +2861,7 @@ ul.price-summary-list li.total-price {
 }
 
 .form-success .content {
-    margin-left: 70px;
+    margin-left: 0px;
 }
 
 .form-success .content h2 {
@@ -3476,6 +3476,9 @@ ul.comment-item ul {
     font-size: 56px;
 }
 
+.title-center{
+    text-align: center;
+}
 
 /**
  * Footer
@@ -3773,4 +3776,13 @@ ul.static-page-menu li.active a {
 
 .container-fluid{
     text-align: center;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-fixed {
+    /* custom width */
+    width:320px;
 }
