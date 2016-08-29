@@ -3781,8 +3781,3 @@ ul.static-page-menu li.active a {
 .row-centered {
     text-align:center;
 }
-
-.col-fixed {
-    /* custom width */
-    width:320px;
-}
