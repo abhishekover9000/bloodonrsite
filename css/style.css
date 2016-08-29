@@ -3777,3 +3777,12 @@ ul.static-page-menu li.active a {
 .container-fluid{
     text-align: center;
 }
+
+.row-centered {
+    text-align:center;
+}
+
+.col-fixed {
+    /* custom width */
+    width:320px;
+}
