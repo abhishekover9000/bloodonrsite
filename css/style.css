@@ -3781,3 +3781,16 @@ ul.static-page-menu li.active a {
 .row-centered {
     text-align:center;
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+padding-bottom: 1.5em;
+
+}
+.text-center{
+    text-align: center;
+}
+.about-section{
+    padding: 30px 0;
+}
