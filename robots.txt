@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /congrats.html
+Disallow: /thankyou.html
+Disallow: /firstemail.html
+Disallow: /wireframe.html
+Disallow: /sitemap.xml
+Allow: 
+
+Sitemap: http://www.bloodonr.com/sitemap.xml
