@@ -35,7 +35,7 @@ ini_set('sendmail_from','socialmedia@bloodonr.com');
 
 
 $title = "Welcome to BlooDonR";
-$message= "Hello " . $fullname . ",<br/>" . "Welcome to BlooDonR! We will keep you up to date with the latest progress as we build towards our MVP launch. <br/>" . "If you would like to be included to our beta group, please join at http://www.bloodonr.com/usersurvery.html <br/>" . "Thanks, <br/> The BlooDonR Team"; 
+$message= "Hello " . $fullname . ",<br/>" . "Welcome to BlooDonR! We will keep you up to date with the latest progress as we build towards our MVP launch. <br/>" . "If you would like to be included to our beta group, please join at http://www.bloodonr.com/usersurvey.html <br/>" . "Thanks, <br/> The BlooDonR Team"; 
 
 // Always set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";

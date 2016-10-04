@@ -16,6 +16,14 @@ $conn= mysqli_connect('localhost',$username,$password,$database) or die ("Cant c
  
  $phone= sanitize($conn, $data['phone']);
  $email = sanitize($conn, $data['email']);
+ $dl = sanitize($conn, $data['dl']);
+ $address = sanitize($conn, $data['address']);
+ $zipcode = sanitize($conn, $data['zipcode']);
+ $name = sanitize($conn, $data['name']);
+ $bloodtype = sanitize($conn, $data['bloodtype']);
+ $age = sanitize($conn, $data['age']);
+
+
  $survey = $data['survey'];
 
 
@@ -42,7 +50,8 @@ if ($one == "Yes"){
 else
 	$oneyestext=null;
  
-$query="INSERT INTO UserSurvey (email ,phone, one, two, three, four, seven, eight, oneyestext) VALUES ('$email', '$phone', '$one', '$two', '$three', '$four', '$seven', '$eight', '$oneyestext')";
+$query="INSERT INTO UserSurvey (email ,phone, name, age, bloodtype, dl, address, zipcode, one, two, three, four, seven, eight, oneyestext) VALUES ('$email', '$phone', '$name',
+'$age', '$bloodtype', '$dl', '$address', '$zipcode','$one', '$two', '$three', '$four', '$seven', '$eight', '$oneyestext')";
 
 $finalprod= mysqli_query($conn, $query) or die ( mysqli_error());
 
