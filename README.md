@@ -1,4 +1,4 @@
 # Bloodonr site
 
-Web repo for www.bloodonr.com's validation website. 
+Web repo for www.bloodonr.com validation website. 
 
